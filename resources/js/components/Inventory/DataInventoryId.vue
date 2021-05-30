@@ -61,16 +61,12 @@
                             <label class="title">Unidades:</label>
                             {{inventoryData.units}}
                         </div>
-                        <div class="form-group col-md-4">
-                            <label class="title">Unidades Finales:</label>
-                            {{inventoryData.final_units}}
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
+                         <div class="form-group col-md-4">
                             <label class="title">Costo:</label>
                             {{inventoryData.cost | currency}}
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group col-md-4">
                             <label class="title">Valor:</label>
                             {{inventoryData.value | currency}}
@@ -79,9 +75,7 @@
                             <label class="title">Valor mínimo:</label>
                             {{inventoryData.minimum_value | currency}}
                         </div>
-                    </div>
-                    <div class="form-row">
-                         <div class="form-group col-md-4">
+                        <div class="form-group col-md-4">
                             <label class="title">Fecha de creación:</label>
                             {{inventoryData.created_at}}
                         </div>

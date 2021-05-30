@@ -619,6 +619,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   mounted: function mounted() {
     this.loadSuppliers();
+    this.dataTable();
   },
   methods: {
     dataTable: function dataTable() {
@@ -626,7 +627,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         jquery__WEBPACK_IMPORTED_MODULE_1___default()('#tblSuppliers').DataTable({
           "order": [[0, 'desc']],
           language: {
-            "sProcessing": "Procesando...",
+            "sProcessing": '<i class="fa fa-spinner fa-spin" style="font-size:50px;color:rgb(75, 183, 245);"></i>',
             "sLengthMenu": "Mostrar _MENU_ registros",
             "sZeroRecords": "No se encontraron resultados",
             "sEmptyTable": "Ningún dato disponible en esta tabla",

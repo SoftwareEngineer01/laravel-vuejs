@@ -137,6 +137,7 @@
 
         mounted() {
             this.loadInventaryTypes();
+            this.dataTable();
         },
 
         methods: {
@@ -152,7 +153,7 @@
                             [0, 'desc']
                         ],
                         language: {
-                            "sProcessing": "Procesando...",
+                            "sProcessing": '<i class="fa fa-spinner fa-spin" style="font-size:50px;color:rgb(75, 183, 245);"></i>',
                             "sLengthMenu": "Mostrar _MENU_ registros",
                             "sZeroRecords": "No se encontraron resultados",
                             "sEmptyTable": "Ningún dato disponible en esta tabla",

@@ -18,7 +18,7 @@ class InventoryController extends ResponseApiController
         $inventories = Inventory::select('inventories.id', 'inventories.code', 'inventory_types.name as inventory_type',
                                          'suppliers.business_name as supplier', 'inventories.bill', 'inventories.model',
                                          'inventories.description', 'inventories.size', 'inventories.color', 'inventories.material',
-                                         'inventories.group', 'inventories.units', 'inventories.final_units', 'inventories.outputs',
+                                         'inventories.group', 'inventories.units', 'inventories.outputs',
                                          'inventories.cost', 'inventories.value', 'inventories.minimum_value', 'inventories.created_at')
                                  ->join('inventory_types', 'inventories.inventory_type_id', '=', 'inventory_types.id')
                                  ->join('suppliers', 'inventories.supplier_id', '=', 'suppliers.id')
@@ -69,7 +69,6 @@ class InventoryController extends ResponseApiController
                 $inventory->material = $request->get('material');
                 $inventory->group = $request->get('group');
                 $inventory->units = $request->get('units');
-                $inventory->final_units = $request->get('units');
                 $inventory->outputs = 0;
                 $inventory->cost = $request->get('cost');
                 $inventory->value = $request->get('value');
@@ -93,7 +92,7 @@ class InventoryController extends ResponseApiController
         $inventory = Inventory::select('inventories.id', 'inventories.code', 'inventories.inventory_type_id', 'inventory_types.name as inventory_type',
                                         'inventories.supplier_id', 'suppliers.business_name as supplier', 'inventories.bill', 'inventories.model',
                                         'inventories.description', 'inventories.size', 'inventories.color', 'inventories.material',
-                                        'inventories.group', 'inventories.units', 'inventories.final_units', 'inventories.outputs',
+                                        'inventories.group', 'inventories.units', 'inventories.outputs',
                                         'inventories.cost', 'inventories.value', 'inventories.minimum_value', 'inventories.created_at')
                                 ->join('inventory_types', 'inventories.inventory_type_id', '=', 'inventory_types.id')
                                 ->join('suppliers', 'inventories.supplier_id', '=', 'suppliers.id')

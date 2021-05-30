@@ -69,7 +69,7 @@ class InventoryEntryController extends ResponseApiController
             $inventory_entry->cost = $cost;
             $inventory_entry->save();
 
-            $inventory->final_units += $entries;
+            $inventory->units += $entries;
             $inventory->cost = $cost;
             $inventory->save();
 
