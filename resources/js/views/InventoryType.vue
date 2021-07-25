@@ -136,8 +136,8 @@
         },
 
         mounted() {
-            this.loadInventaryTypes();
             this.dataTable();
+            this.loadInventaryTypes();
         },
 
         methods: {
@@ -150,7 +150,7 @@
                 this.$nextTick(() => {
                     $('#example').DataTable({
                         "order": [
-                            [0, 'desc']
+                            [2, 'desc']
                         ],
                         language: {
                             "sProcessing": '<i class="fa fa-spinner fa-spin" style="font-size:50px;color:rgb(75, 183, 245);"></i>',
